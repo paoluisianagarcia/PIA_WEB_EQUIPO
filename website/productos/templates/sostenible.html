@@ -1,0 +1,187 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Moda Sostenible</title> 
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'app.css' %}"> 
+        <script src="{% static 'app.js' %}"></script>
+    <style>
+        .fondo {
+            font-family: 'Helvetica Neue', Cambria, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fbfcfc;
+            color: #121212;
+        }
+        .titulo {
+            background-color: rgb(75, 146, 88);
+            color: #ffffff;
+            text-align: center;
+            padding: 25px;
+            margin: 0;
+            font-size: 3em;
+        }
+        .navegacion {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+        .navegacion li {
+            margin: 0 15px;
+        }
+        .navegacion a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+        .navegacion a:hover {
+            background-color: #f0f0f0;
+        }
+        h2 {
+            border-bottom: 2px solid rgb(75, 146, 88);
+            padding-bottom: 10px;
+        }
+        article, main, footer {
+            padding: 20px;
+        }
+        figure {
+            text-align: center;
+        }
+        figure img {
+            width: 500px;
+            height: 500px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: rgb(75, 146, 88);
+            color: white;
+        }
+        td {
+            text-align: center;
+        }
+        iframe {
+            display: block;
+            margin: 20px auto;
+        }
+        footer {
+            background-color: rgb(75, 146, 88);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            width: 100%;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body class="fondo">
+    <header> 
+        <h1 class="titulo">Moda Sostenible</h1>
+        <ul class="navegacion"> 
+            <li><a href="{% url 'index' %}">La Moda</a></li>
+            <li><a href="{% url 'vintage' %}">Moda Vintage</a></li> 
+            <li><a href="{% url 'minimalismo' %}">Minimalismo</a></li> 
+            <li><a href="{% url 'sostenible' %}">Moda Sostenible</a></li> 
+            <li><a href="{% url 'accesorios' %}">Accesorios Destacados</a></li> 
+        </ul> 
+    </header>
+    <main>
+        <article>
+            <h2 id="moda">La Moda Sostenible</h2>
+            <p><strong>La moda sostenible</strong> es un enfoque global que busca reducir el impacto negativo de la industria textil en el medio ambiente, la sociedad y la economía.</p>
+            <figure>
+                <img src="https://www.eurofins-environment.es/wp-content/uploads/2022/03/moda-sostenible.jpg" alt="sostenible">
+            </figure>
+        </article>
+        <section>
+            <h2 id="caracteristicas">Características del Estilo Sostenible</h2>
+            <ul>
+                <li><strong>Materiales Orgánicos:</strong> Uso de <em>algodón orgánico</em>, <em>lino</em> y <em>cáñamo</em>.</li>
+                <li><strong>Producción Ética:</strong> Condiciones laborales justas y seguras.</li>
+                <li><strong>Bajo Impacto Ambiental:</strong> Reducción de la huella de carbono y uso de <i>energías renovables</i>.</li>
+            </ul>
+            <p>La moda sostenible no solo es una elección de estilo, sino también una declaración de principios que promueve la <mark>sostenibilidad</mark> y la <mark>responsabilidad social</mark>.</p>
+        </section>
+        <section>
+            <h2 id="incorporar">Cómo Incorporar la Moda Sostenible</h2>
+            <ul>
+                <li><strong>Compra Responsable:</strong> Opta por marcas que promuevan la sostenibilidad.</li>
+                <li><strong>Reutilización:</strong> Compra ropa de segunda mano o intercambia prendas.</li>
+                <li><strong>Reciclaje:</strong> Dona o recicla ropa que ya no uses.</li>
+            </ul>
+            <p>Incorporar la moda sostenible en tu estilo diario puede ser tan simple como elegir prendas de <abbr title="Materiales Reciclados">materiales reciclados</abbr> o apoyar a marcas locales.</p>
+        </section>
+        <section>
+            <h2 id="tendencias">Tendencias Actuales en Moda Sostenible</h2>
+            <ul>
+                <li><strong>Moda Circular:</strong> Prendas diseñadas para ser recicladas al final de su vida útil.</li>
+                <li><strong>Transparencia:</strong> Marcas que muestran todo el proceso de producción.</li>
+                <li><strong>Innovación:</strong> Uso de nuevos materiales sostenibles como el <i>Piñatex</i> (fibra de piña).</li>
+            </ul>
+            <p>Las tendencias actuales en moda sostenible reflejan un deseo de volver a lo esencial y duradero, en contraste con la moda rápida y desechable.</p>
+        </section>
+        <section>
+            <h2 id="beneficios">Beneficios de la Moda Sostenible</h2>
+            <ul>
+                <li><strong>Calidad:</strong> Prendas hechas con materiales de mejor calidad y técnicas de confección más duraderas.</li>
+                <li><strong>Unicidad:</strong> Cada pieza es única, permitiendo expresar el estilo personal de manera distintiva.</li>
+                <li><strong>Sostenibilidad:</strong> Promueve la sostenibilidad al priorizar la calidad sobre la cantidad de prendas en el armario.</li>
+            </ul>
+            <p>Además de los beneficios estéticos, la moda sostenible ofrece una conexión tangible con el pasado, permitiéndonos apreciar la artesanía y el diseño de épocas anteriores.</p>
+        </section>
+        <section>
+            <h2 id="tabla">Comparación de Materiales Sostenibles</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Material</th>
+                        <th>Descripción</th>
+                        <th>Beneficios</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Algodón Orgánico</td>
+                        <td>Algodón cultivado sin pesticidas ni fertilizantes químicos.</td>
+                        <td>Menor impacto ambiental, más seguro para los agricultores.</td>
+                    </tr>
+                    <tr>
+                        <td>Lino</td>
+                        <td>Fibra natural obtenida del tallo de la planta de lino.</td>
+                        <td>Biodegradable, requiere menos agua que el algodón.</td>
+                    </tr>
+                    <tr>
+                        <td>Cáñamo</td>
+                        <td>Fibra obtenida de la planta de cáñamo.</td>
+                        <td>Muy resistente, biodegradable, requiere menos agua.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section> 
+    </main>
+    <footer>
+        <address>
+            <p>Desarrollado por Carolina</p>
+            <p>Derechos reservados ©</p>
+        </address>
+    </footer>
+    <script src="{% static 'app.js' %}">
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesorios Destacados en la Moda</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'app.css' %}">
+    <script src="{% static 'app.js' %}"></script>
+    <style>
+        .fondo {
+            font-family: 'Helvetica Neue', Cambria, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(255, 255, 255);
+            color: #020202;
+        }
+        .titulo {
+            background-color: rgb(203, 79, 98);
+            color: #ffffff;
+            padding: 25px;
+            text-align: center;
+            margin: 0;
+            font-size: 3em;
+        }
+        .navegacion {
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+        .navegacion li {
+            margin: 0 15px;
+        }
+        .navegacion a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+            justify-content: center;
+            margin: 0;
+        }
+        .navegacion a:hover {
+            background-color: #f0f0f0;
+        }
+        .cuerpo {
+            padding: 20px;
+        }
+        .subtitulos {
+            border-bottom: 2px solid rgb(203, 79, 98);
+            padding-bottom: 10px;
+        }
+        aside {
+            padding: 20px;
+        }
+        footer {
+            background-color: rgb(203, 79, 98);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+        footer p {
+            margin: 0;
+        }
+        .imagenes {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            text-align: center;
+            gap: 10px;
+        }
+        .imagenes figure {
+            flex: 1;
+            margin: 0;
+            padding: 0;
+        }
+        .imagenes img {
+            width: 100%;
+            height: auto;
+        }
+        video {
+            margin-top: 20px;
+            width: 200px;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body class="fondo">
+    <header>
+        <h1 class="titulo">Accesorios Destacados en la Moda</h1>
+        <ul class="navegacion">
+            <li><a href="{% url 'index' %}">La Moda</a></li>
+            <li><a href="{% url 'vintage' %}">Moda Vintage</a></li>
+            <li><a href="{% url 'minimalismo' %}">Minimalismo</a></li>
+            <li><a href="{% url 'sostenible' %}">Moda Sostenible</a></li>
+            <li><a href="{% url 'accesorios' %}">Accesorios Destacados</a></li>
+        </ul>
+    </header>
+    <main class="cuerpo">
+        <article>
+            <header>
+                <h2 id="accesorios" class="subtitulos">Accesorios Destacados</h2>
+                <video controls src="https://videos.pexels.com/video-files/4974760/4974760-sd_506_960_25fps.mp4"></video>
+                <p><b>Los accesorios</b> son elementos clave para completar cualquier look. Desde bolsos y zapatos hasta joyas y gafas de sol, los accesorios pueden transformar un atuendo simple en algo espectacular.</p>
+                <p>Los accesorios forman parte de la historia de la moda, ya que son los detalles que pueden definir y realzar un estilo. Con ellos, podemos reflejar nuestra personalidad y añadir un toque único a nuestro vestuario diario.</p>
+            </header>
+            <section>
+                <h3 id="caracteristicas" class="subtitulos">Características de los Accesorios Destacados</h3>
+                <div class="imagenes">
+                    <figure>
+                        <img src="https://i0.wp.com/instyle.mx/wp-content/uploads/2022/02/a1-5.jpg?fit=1280%2C1280&ssl=1" alt="Bolso de diseño">
+                        <figcaption>Figura 1. Bolso de diseño</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sc8ef085152704bec8d9b36c0b174f504n.jpg_640x640Q90.jpg_.webp" alt="Zapatos cómodos">
+                        <figcaption>Figura 2. Zapatos cómodos</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://www.ororafael.com/wp-content/uploads/2023/04/Joyeria-moderna-de-oro-14k-min.jpg" alt="Joyas elegantes">
+                        <figcaption>Figura 3. Joyas elegantes</figcaption>
+                    </figure>
+                </div>
+            </section>
+            <section>
+                <h3 id="incorporar" class="subtitulos">Cómo Incorporar Accesorios Destacados</h3>
+                <p>Para incorporar accesorios destacados en tu estilo diario, considera los siguientes consejos:</p>
+                <ul>
+                    <li><b>Bolsos:</b> Opta por bolsos hechos de materiales reciclados o sostenibles.</li>
+                    <li><b>Joyas:</b> Elige joyas hechas a mano con materiales orgánicos como madera o algodón.</li>
+                    <li><b>Gafas de Sol:</b> Busca gafas de sol fabricadas con bambú u otros materiales sostenibles.</li>
+                </ul>
+            </section>
+            <section>
+                <h3 id="tendencias" class="subtitulos">Tendencias Actuales en Accesorios Destacados</h3>
+                <p>En la actualidad, los accesorios juegan un papel crucial en la moda. Algunas de las tendencias actuales incluyen:</p>
+                <ol>
+                    <li><b>Minimalismo:</b> Accesorios simples y elegantes que complementan cualquier atuendo.</li>
+                    <li><b>Eco-Friendly:</b> Accesorios hechos con materiales sostenibles y procesos éticos.</li>
+                    <li><b>Personalización:</b> Accesorios personalizados que reflejan tu estilo único.</li>
+                </ol>
+            </section>
+            <section>
+                <h3 id="beneficios" class="subtitulos">Beneficios de los Accesorios Destacados</h3>
+                <ul>
+                    <li><b>Calidad:</b> Accesorios hechos con materiales de mejor calidad y técnicas de confección más duraderas.</li>
+                    <li><b>Unicidad:</b> Cada pieza es única, permitiendo expresar el estilo personal de manera distintiva.</li>
+                    <li><b>Sostenibilidad:</b> Promueve la sostenibilidad al priorizar la calidad sobre la cantidad de accesorios.</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <address>
+            <p>Desarrollado por Carolina</p>
+            <p>Derechos reservados ©</p>
+        </address>
+    </footer>
+    <script src="{% static 'app.js' %}"></script>
+</body>
+</html>

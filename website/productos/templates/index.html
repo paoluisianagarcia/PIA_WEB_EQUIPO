@@ -1,0 +1,212 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Moda</title> 
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'app.css' %}"> 
+        <script src="{% static 'app.js' %}"></script>
+    <style>
+        .fondo {
+            font-family: 'Helvetica Neue', Cambria, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #020202;   
+        }  
+        .titulo {
+            background-color: rgb(233, 195, 248);
+            color: #070707;
+            padding: 25px;
+            text-align: center; 
+            margin: 0;
+            font-size: 3em;
+        }    
+        .navegacion {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+        .navegacion li {
+            margin: 0 15px;
+        }
+        .navegacion a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+        .navegacion a:hover {
+            background-color: #f0f0f0;
+        }
+        .cuerpo {
+            padding: 20px;
+        }
+        .subtitulos {
+            border-bottom: 2px solid rgb(210, 108, 250);
+            padding-bottom: 10px;
+        }
+        aside  {
+            padding: 20px;
+        }
+        footer {
+            background-color: rgb(210, 128, 243);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+        footer p {
+            margin: 0;
+        }
+        .social-icons {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .social-icons a {
+            text-decoration: none;
+            color: #000;
+        }
+        .imagenes {
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            flex-wrap: wrap;
+            text-align: center;
+            gap: 10px; 
+        }
+        .imagenes figure {
+            flex: 1;
+            margin: 0;
+            padding: 0;
+        }
+        .imagenes img {
+            width: 100%;
+            height: auto; 
+        }
+        .pdf-container embed {
+            width: 500px;
+            height: 400px;
+            border: 1px solid #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body class="fondo">
+    <header>
+        <h1 class="titulo">Introduccion a la Moda</h1> 
+        <ul class="navegacion">
+            <li><a href="{% url 'vintage' %}">Moda Vintage</a></li>
+            <li><a href="{% url 'minimalismo' %}">Minimalismo</a></li>
+            <li><a href="{% url 'sostenible' %}">Moda Sostenible</a></li>
+            <li><a href="{% url 'accesorios' %}">Accesorios Destacados</a></li>
+        </ul>
+    </header>
+    <main class="cuerpo">
+        <article>
+            <section>
+                <h2 class="subtitulos">La moda</h2>
+                <p><b>La moda</b> es una corriente que surge a través del tiempo en ella encontramos diferentes tipos de estilos, gustos, diseños, colores, telas, etc. Hoy día la moda es fundamental para cada persona en la sociedad ya que esta nos identifica y nos hace auténticos y con personalidad. La moda es la libre expresión de cada persona, es la forma en la cual podemos reflejar lo que somos y llevamos dentro en nuestro interior.</p>
+                <p>La moda forma parte de la historia ya que esta es la única la cual nos muestra como un ser único; además de que esta nos muestra nuestro ser interior con lo que llevamos puesto a diario. Podemos reflejar lo que somos tanto por dentro como por fuera con todo esto doy la bienvenida a que conozcan un poco más de lo que para mí y para el mundo es este tema que es tan fundamental para la vida.</p>
+            </section>
+            <section>
+                <h2 class="subtitulos" id="estilos">Estilos de moda</h2>
+                <div class="imagenes">
+                    <figure>
+                        <img src="https://www.instyle.es/medio/2023/12/29/estilo-aesthetic-1_9dfcba3c_231229130427_1280x1280.jpg" alt="modelo">
+                        <figcaption>Figura 1. Estilo vintage</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://hips.hearstapps.com/hmg-prod/images/boho-estilo-inspiracion-mujer-elle-1612256491.jpg" alt="modelo">
+                        <figcaption>Figura 2. Estilo bohemio</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://unycas.com/wp-content/uploads/2019/03/estilo-rock-chica.jpg" alt="modelo">
+                        <figcaption>Figura 3. Estilo rockero</figcaption>
+                    </figure>
+                </div>
+            </section>
+            <section>
+                <h2 class="subtitulos" id="actualidad">Estilo en la actualidad</h2>
+                <p>En la actualidad la moda es un tema muy importante para la sociedad ya que esta nos identifica y nos hace únicos. Existen diferentes tendencias de moda que se han ido adaptando a lo largo del tiempo, algunas de estas tendencias actuales son:</p>
+                <ol>
+                    <li><b>Sostenibilidad:</b> La moda sostenible está en auge, con un enfoque en la producción de prendas con materiales y procesos respetuosos con el medio ambiente.</li>
+                    <li><b>Inclusión y Diversidad:</b> Las marcas están adoptando una mayor inclusión y diversidad en sus colecciones, reflejando una sociedad más globalizada y conectada.</li>
+                    <li><b>Estilo Tenniscore:</b> Inspirado en el tenis, este estilo incluye prendas deportivas elegantes y cómodas.</li>
+                    <li><b>Moda Vintage:</b> La moda vintage sigue siendo popular, con muchas personas optando por prendas de segunda mano y estilos retro.</li>
+                    <li><b>Minimalismo:</b> Los diseños minimalistas y las prendas básicas pero elegantes están ganando terreno, ofreciendo versatilidad y simplicidad.</li>
+                    <li><b>Accesorios Destacados:</b> Los accesorios, como bolsos y zapatos, juegan un papel crucial en completar los looks. Los bolsos de diseño y los zapatos cómodos pero a la moda son muy buscados.</li>
+                <ol>
+            </section>
+            <section>
+                <h2 class="subtitulos" >Conoce más</h2>
+                <p>Si quieres conocer más sobre la moda te proporcionamos este excelente libro que te encantará</p>
+                <div class="pdf-container">
+                <embed src="https://www.fadp.edu.co/wp-content/uploads/2019/02/4-ilovepdf-compressed.pdf" type="application/pdf">
+                </div>
+            </section>
+        </article>
+        <section>
+            <h2 class="subtitulos" id="boletin">Suscríbete a nuestro boletín</h2>
+            <form id="subscribe-form" method="post">
+                {% csrf_token %}
+                <label for="subscribe-name">Nombre:</label><br>
+                <input type="text" id="subscribe-name" name="nombre" required><br>
+                <label for="subscribe-email">Correo Electrónico:</label><br>
+                <input type="email" id="subscribe-email" name="correo_electronico" required><br>
+                <input type="submit" value="Suscribirse">
+            </form>
+            <div id="success-message" style="display:none; color: green;">
+                ¡Gracias por suscribirte!
+            </div>
+        </section>     
+    </main>
+    <aside>
+        <h2 class="subtitulos" id="aside">Síguenos en Redes Sociales</h2>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        </div>
+    </aside>
+    <footer>
+        <address>
+            <p>Desarrollado por Carolina</p>
+            <p>Derechos reservados ©</p>
+        </address>
+    </footer>
+    <script src="{% static 'app.js' %}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('subscribe-form');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); 
+                const formData = new FormData(form);
+                const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+                fetch("{% url 'suscribirse' %}", {
+                    method: 'POST',
+                    headers: {
+                        'X-CSRFToken': csrfToken,
+                    },
+                    body: formData,
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        document.getElementById('success-message').style.display = 'block';
+                        form.reset(); 
+                    } else {
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
